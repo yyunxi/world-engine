@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE文档类型 html>
+<html lang语言="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>世界引擎 · v8</title>
+<meta元数据元数据 charset字符集="UTF-8">
+<meta元数据元数据 name名称="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title标题标题>世界引擎 · v8</title标题标题>
 <style>
-:root {
-    --bg: #f8f2e8; --bg2: #f5eee4; --bg3: #f0e8dc;
-    --border: #d5c8b8; --border2: #c8bcae;
+:root根 {:根根{:根元素 {:根元素{
+    --bg: #f8f2e8; --bg2: #f5eee4; --bg3: #f0e8dc;    --背景: #f8f2e8; --背景2: #f5eee4; --背景3: #f0e8dc;--背景: #f8f2e8;--背景2: #f5eee4;--背景3: #f0e8dc;--背景: #f8f2e8;--背景2: #f5eee4;--背景3: #f0e8dc;
+    --border: #d5c8b8; --border2: #c8bcae;--边框: #d5c8b8;--边框2: #c8bcae;
     --text: #3a2e24; --text2: #6a5a4a; --text3: #8a7a6a; --text4: #b8aa9a;
     --accent: #4a3a2e; --msg-user: #7a6a5a;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
     font-family: 'PingFang SC','Microsoft YaHei',system-ui,sans-serif;
-    min-height:100vh; display:flex; justify-content:center; align-items:center;
-    padding:10px; transition: background .8s,color .6s; background:#f5f0e8; color:var(--text);
+    min-height:100vh; display:flex; justify-content:center; align-items:center;最小高度:100视口高度; 显示:弹性盒子; justify-content:居中; align-items:居中;
+    padding:10px; transition: background .8s,color .6s; background:#f5f0e8; color:var(--text);内边距:10px; 过渡: 背景 .8秒,颜色 .6秒; 背景:#f5f0e8;颜色:变量(--text);
 }
-.game-container {
-    width:100%; max-width:620px; height:96vh; max-height:940px;
+.game-container {.游戏容器 {
+    width:100%; max-width:620px; height:96vh; max-height:940px;宽度:100%; 最大宽度:620px; 高度:96vh; 最大高度:940px;
     display:flex; flex-direction:column; border-radius:16px;
     box-shadow:0 8px 40px rgba(0,0,0,.12); overflow:hidden; border:1px solid var(--border);
     position:relative; background:var(--bg);
@@ -28,11 +28,11 @@ body {
     border-bottom:1px solid var(--border); flex-wrap:wrap; flex-shrink:0; background:var(--bg3);
 }
 .header-left { display:flex; align-items:center; gap:6px; flex:1; min-width:140px; }
-.header-title { font-size:16px; letter-spacing:2px; color:var(--accent); white-space:nowrap; }
+.header-title标题 { font字体-size:16px; letter-spacing:2px; color:var(--accent重音); white-space:nowrap; }
 .session-selector { display:flex; align-items:center; gap:3px; }
 .session-selector select {
-    font-size:11px; padding:3px 22px 3px 8px; border-radius:4px; border:1px solid var(--border2);
-    background:transparent; cursor:pointer; font-family:inherit; outline:none; color:var(--text2);
+    font字体-size:11px; padding:3px 22px 3px 8px; border边框-radius:4px; border:1px solid var(--border2);
+    background:transparent; cursor:pointer; font字体-family:inherit; outline:none; color:var(--text2文本2);
     appearance:none; -webkit-appearance:none; max-width:110px; min-width:60px;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236a5a4a'/%3E%3C/svg%3E");
     background-repeat:no-repeat; background-position:right 6px center;
